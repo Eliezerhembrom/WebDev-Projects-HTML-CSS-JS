@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,54,1) 35%, rgba(0,212,255,1) 100%);
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  
+  .todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+  }
+  
+  .head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 30px;
+  }
+  
+  .head h2{
+    color: #002765;
+  }
+  
+  .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    background: #edeef0;
+    padding-left: 20px;
+    margin-bottom: 25px;
+  
+  }
+  
+  #input-box{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+  }
+  
+  .add-button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #790936;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 40px;
+    cursor: pointer;
+  
+  }
+  
+  ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 42px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+  
+  }
+  
+  ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: url(./images/circle-regular.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    top: 12px;
+    left: 8px;
+    transition: all ease 0.5s;
+  }
+  
+  ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+    transition: all ease 0.5s;
+  }
+  
+  ul li.checked::before{
+    background: url(./images/circle-check-solid.png);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+  }
+  
+  ul li span:hover{
+    background: #edeef0;
+  }
+  
+  #list-container li{
+    transition: all ease 0.5s;
+  }
