@@ -4,28 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guess My Number</title>
+  <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <header>
-        <h1>Guess My Number!</h1>
-        <p class="between">(Between 1 and 20)</p>
-        <button class="btn again">Again!</button>
-        <div class="number">?</div>
-      </header>
-      <main>
-          <div class="left">
-              <input class="input-btn" type="number">
-              <button  class="btn check">Check</button>
-          </div>
-          <div class="right">
-            <p class="guessing">Start guessing...</p>
-            <div class="scores">
-              <p class="label-score">💯 Score: <span class="score">20</span></p>
-              <p class="label-highscore">🥇 Highscore: <span class="highscore">0</span></p>
-            </div>
-          </div>
-      </main>
-      <script src="script.js"></script>
+    <div class="container">
+      <div class="left">
+        <header>
+          <h1>Guess My Number!</h1>
+          <p class="between">(Between 1 and 20)</p>
+        </header>
+        <div class="main-container">
+          <div class="number">?</div>
+        <div class="guess-container">
+          <input class="input-btn" type="number" placeholder="Enter a number">
+        </div>
+        <p class="guessing">Start guessing...</p>
+        <div class="button-container">
+          <button  class="btn check">Check</button>
+          <canvas class="confetti" id="canvas"></canvas>
+          <button class="btn again">Play again!</button>
+        </div>
+        <div class="scores">
+          <p class="label-score">💯 Score: <span class="score">20</span></p>
+          <p class="label-highscore">🥇 Last Score: <span class="highscore">0</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <h2 class="recent-score">Recent Score</h2>
+
+      <div class="lists">
+        <div class="left-content">
+          <p>Time</p>
+          <ul id="myList">
+            
+          </ul>
+        </div>
+        <div class="right-content">
+          <p>Score</p>
+          <ul id="scoreList">
+
+          </ul>
+        </div>
+          
+      </div>
+    </div>
+  </div>
+    <script src="script.js"></script>
+    <script src="popup.js"></script>
   </body>
-</html>
+  </html>
